@@ -1,0 +1,51 @@
+/* .card {
+    border: 5px solid blue;
+    width: 300px;
+    height: 150px;
+    margin: 10px;
+}
+
+.RowOne {
+    display: flex;
+    flex-direction: row;
+}
+
+.RowTwo {
+    display: flex;
+    flex-direction: row;
+}
+
+.RowThree {
+    display: flex;
+    flex-direction: row;
+} */
+
+/* .gameCards {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid red;
+    width: 50%;
+    margin: auto;
+    position: relative;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+}; */
+
+.gameCards {
+    margin: 5px;
+    display: grid;  
+    /* grid-template-columns: 100px 50px 100px;
+    grid-template-rows: 80px auto 80px;  */
+    column-gap: 10px;
+    row-gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    border: 1px solid red;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
+    gap: 10px;
+}
+
+.card1 {
+    border: 10px solid red;
+}
