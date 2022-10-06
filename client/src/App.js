@@ -1,10 +1,10 @@
-import './App.css';
-import Cards from "./components/cards.js";
+import "./App.css";
+import GameBoard from "./components/gameBoard.js";
 
 function App() {
   return (
     <div className="App">
-      <Cards />
+      <GameBoard />
     </div>
   );
 }
