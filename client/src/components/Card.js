@@ -13,7 +13,6 @@ const Card = (props) => {
   return (
     <div className={className}>
       <img src={image} />;
-      <h2>{card.name}</h2>
     </div>
   );
 };
