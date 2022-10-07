@@ -6,17 +6,13 @@ import CardListGenerator from "./cardListGenerator.js";
 
 const Card = (props) => {
   const card = props.card;
-
-  //every time the state changes, map will re-do
-  const handleClick = (event) => {
-    props.onCardClick(card);
-  };
+  const image = props.image;
 
   const className = "Card" + (card.selected ? " Clicked" : ""); // true then false
 
   return (
-    <div className={className} onClick={handleClick}>
-      <CardListGenerator />
+    <div className={className}>
+      <img src={image} />;
       <h2>{card.name}</h2>
     </div>
   );

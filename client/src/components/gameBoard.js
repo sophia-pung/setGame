@@ -62,10 +62,16 @@ const GameBoard = () => {
   const [allCards, setAllCards] = useState(initialCards);
   const [visibleCards, setVisibleCards] = useState([]);
   const [score, setScore] = useState(0);
+
   const handleCardClick = (card) => {
-    const newCards = allCards.map((c) => {
+    console.log("VISIBLE CARDS", visibleCards)
+    console.log("CLICKED CARD", card);
+    console.log("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+    const newCards = visibleCards.map((c) => {
+      console.log("c.id", c.id);
+      console.log("card.id", card.id);
       if (c.id == card.id) {
-        c.selected = !c.selected;
+        card.selected = !card.selected;
       }
       return c;
     });
@@ -96,11 +102,13 @@ const GameBoard = () => {
       <div className="gameCards">
         {visibleCards.map((element, index) => {
           return (
+            <div onClick={() => handleCardClick(element)}>
             <Card
-              onCardClick={handleCardClick}
+              image={element.image}
               key={"card-" + index}
               card={element}
             />
+            </div>
           );
         })}
       </div>

@@ -49,3 +49,11 @@
 .card1 {
     border: 10px solid red;
 }
+
+.Card {
+    border: 2px solid blue;
+  }
+
+.Card.Clicked {
+    border: 20px solid green; 
+}
